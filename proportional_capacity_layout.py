@@ -141,7 +141,7 @@ plt.savefig('figures/capacity_factor_solar.jpg',
 
 #%%
 # Create aggregated time-series for wind and solar
-cf_exponent=1
+cf_exponent=2
 layout_wind=cap_factors_wind**cf_exponent
 total_capacity_layout=layout_wind.values.sum()
 agg_cf_wind = (1/total_capacity_layout)*cutout.wind(turbine="Vestas_V112_3MW", 
@@ -162,7 +162,7 @@ plt.savefig('figures/agg_cf_wind.jpg',
 
 
 #%%
-cf_exponent=1
+cf_exponent=2
 layout_solar=cap_factors_solar**cf_exponent
 total_capacity_layout=layout_solar.values.sum()
 agg_cf_solar = (1/total_capacity_layout)*cutout.pv(panel="CSi", 
